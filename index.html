@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Profile</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    
+  </head>
+  <body>
+    <!--Simple Navigation -->
+    <div class="menu">
+      <h2 class="home_and_about">
+        <a href="#home"> Home </a> |
+        <a href="#about"> About Me </a>
+      </h2>
+      <p id="greetingMessage"> Greeting </p>
+    </div>
+     <hr>
+     <button id="darkmode"> Toggle Dark Mode </button>
+     <!--2-Column Layout-->
+    <div class="mainContainer">
+             <table>
+       <tr>
+         <!--LEFT COLUMN-->
+         <td>
+           <div id="home">
+             <img class="me" src="Me.jpg" alt="Profile Image"><br><br>
+             <h2 class="name"> Rania Mae Meceda </h2>
+             <span class="title"> Entry Level Web Developer</span>
+             <button id="editJobBtn"> Edit Job Title </button>
+           </div>
+           <hr>
+           <div id="Contact">
+            <h3 class="contact-head">Contact</h3>
+            <P>Email: mecedarj@students.nu-fairview.edu.ph</P>
+           </div>
+           <hr>
+           <div class="skills">
+              <div class="skillsContainer"> 
+                <h3>Skills</h3>
+                <button id="toggleSkillsBtn"> Hide Skills </button>
+              </div>
+            <dl id="skillsList">
+              <dt>Hard Skills</dt>
+              <dd> Simple Web Development </dd>
+              <dd>Academic Writing</dd>
+              <dd> Customter Service </dd>
+              
+              <dt>Soft Skills</dt>
+              <dd>Effective Communicator</dd>
+              <dd>Leadership</dd>
+              <dd>Empathy</dd>
+            </dl>
+           </div>
+         </td>
+<!-- RIGHT COLUMN -->
+<td>
+  <div id="about">
+    <h2 id="aboutMe">About Me</h2>
+    <p> I'm a second year IT student from NU Fairview. I am currently taking Web Programming to develop my skills in Web Development.</p>
+    <div class="achieve">
+        <h3 id="achievement" >Achievements</h3>
+        <p>Dean's Lister</p>
+        <ul>
+        <li>1st year</li>
+        <li>2nd year, 1st term</li>
+        </ul>
+    </div>
+ 
+  </div>
+<hr>
+  <div class="messagesection">
+    <h2 class="header">Message Me</h2>
+    <form action="submit" method="post">
+    <p>
+        Name:<br>
+        <input type="text" name="name" placeholder="Enter your name" class="textBox" id="nameField">
+    </p>
+    <p>
+        Email:<br>
+        <input type="email" name="email" placeholder="Enter your Email" class="textBox" id="emailField">
+    </p>
+    <textarea id="msgBox" maxlength="200" placeholder="Type your message here"></textarea>
+    <p class="characterCounter"> 
+      Characters left: <span id="counter"> 200 </span> 
+    </p>
+    <p>
+      <input type="submit" class="sendButton" value="Send" onclick="return validateForm()">
+    </p>
+    
+  </form>
+  </div>
+</td>
+</table>
+    </div>
+<!-- FOOTER -->
+ <hr>
+    <footer class="page-footer">
+  <div class="foot">
+    <p><strong>Web Prog - Web Programming 2025</strong></p>
+    <p>Current Date and Time: <span id="dateTime"></span> </p>
+  </div>
+    </footer>
+</html>
